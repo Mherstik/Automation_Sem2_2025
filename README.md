@@ -1,6 +1,4 @@
-# Automation_Sem2_2025
-
-# Automation for Cyber Security
+# Automation for Cyber Security - 2025 Semester 2
 ## ICTPRG434 ICTPRG435
 This unit is part of the Certificate IV Cybersecurity course.
 
