@@ -1,5 +1,9 @@
 # Input: marks
 
+marks = input("What was your score: ")
+
+print(type(marks))
+marks = int(marks)
 
 # Output: letter grade or message (print)
 # if (marks > 100)
