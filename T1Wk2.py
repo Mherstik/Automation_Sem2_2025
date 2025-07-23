@@ -3,12 +3,17 @@
 marks = input("What was your score: ")
 
 print(type(marks))
-marks = int(marks)
+marks = float(marks)  # Convert to integer ??
+print(type(marks))
 
 # Output: letter grade or message (print)
 # if (marks > 100)
+if marks > 100:
+    print("Out of range")
 #   print Out of range 0-100
-# else if (marks > 84) 
+# else if (marks > 84)
+elif marks > 84:
+    print("HD")
 #   print HD
 # else if (marks > 74) 
 #   print D
@@ -17,4 +22,7 @@ marks = int(marks)
 # else if (marks > 49) 
 #   print P
 # else
+else:
+    print("F")
 #   print F 
+
