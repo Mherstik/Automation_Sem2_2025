@@ -67,6 +67,7 @@ while True:
 ###
 ###
 # TEMP Checker
+# What is the temp??
 # Above 40C is DARN HOT!!
 # Above 30C is hot
 # 21-29 = nice!!
