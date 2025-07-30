@@ -33,11 +33,14 @@ print("We're out")
 while True:
     user_input = input("Can I have your score please: ")
     ## FIRST BLOCK
+    ## TEST - did they give a number?
     if not user_input.isdigit():
         print("You didn't enter a number!")
         continue
     ## NEXT BLOCK
+    # Convert string (user_input) to integer and store as marks
     marks = int(user_input)
+    # CHeck if it's out of bounds
     if marks < 0 or marks >= 100:
         print("Out of bounds")
         continue
@@ -61,7 +64,15 @@ while True:
     # <= less than or equal to
     # == is equal to
     # != not equal to
-    
+###
+###
+# TEMP Checker
+# Above 40C is DARN HOT!!
+# Above 30C is hot
+# 21-29 = nice!!
+# 10 -20 = cold
+# below 10 = freezing!!
+
     
 
 
