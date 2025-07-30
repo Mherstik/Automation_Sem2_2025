@@ -18,11 +18,50 @@ for each in somelist:
     print("Get the next number...")
 print("We're out")
 
+# while True:
+#     name = input("Give me a name: ")
+#     if name == "Marcus":
+#         print("You rock!")
+#         break
+#     else:
+#         print("Give me a better name!")
+#
+### Loop until they give me a number!!
+
+# user_input = int(input("Can I have your score please: "))
+
 while True:
-    name = input("Give me a name: ")
-    if name == "Marcus":
-        print("You rock!")
-        break
+    user_input = input("Can I have your score please: ")
+    ## FIRST BLOCK
+    if not user_input.isdigit():
+        print("You didn't enter a number!")
+        continue
+    ## NEXT BLOCK
+    marks = int(user_input)
+    if marks < 0 or marks >= 100:
+        print("Out of bounds")
+        continue
     else:
-        print("Give me a better name!")
+        if marks > 84:
+            print("HD")
+        elif marks > 74:
+            print("D")
+        # else if (marks> 64)
+        elif marks > 64:
+            print("C")
+        # else if (marks > 49)
+        elif marks > 49:
+            print("P")
+        else:
+            print("F")
+        break
+    # > greater than
+    # >= greater than or equal to
+    # < less than
+    # <= less than or equal to
+    # == is equal to
+    # != not equal to
+    
+    
+
 
