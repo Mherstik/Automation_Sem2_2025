@@ -46,7 +46,7 @@ while True:
         continue
     else:
         if marks > 84:
-            print("HD")
+            print("A score of " + str(marks) + "is an HD")
         elif marks > 74:
             print("D")
         # else if (marks> 64)
@@ -68,12 +68,24 @@ while True:
 ###
 # TEMP Checker
 # What is the temp??
-# Above 40C is DARN HOT!!
-# Above 30C is hot
-# 21-29 = nice!!
-# 10 -20 = cold
-# below 10 = freezing!!
+# Ask the user to enter the temperature
+temperature = int(input("Enter the current temperature in Celsius: "))
 
+# Above 40C is DARN HOT!!
+if temperature >= 40:
+    print(f"{temperature}C makes it a DARN hot day!")
+# Above 30C is hot
+elif temperature >= 30:
+    print(f"{temperature}C makes it a hot day!")
+# 21-29 = nice!!
+elif temperature >= 20:
+    print(f"{temperature}C makes it a nice day!")
+# 10 -20 = cold
+elif temperature > 10:
+    print(f"It's a bit cold today. It's {temperature}C.")
+# below 10 = freezing!!
+# else:
+#     "It's FREEZING!"
     
 
 
