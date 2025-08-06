@@ -70,4 +70,16 @@ name = input("What is your name: ")
 #     lollies = input("How many lollies are left: ")
 #     numbercheck(lollies)
 
+## Attempt 2
+# Introduce Try/Except
+# Get age and only give them three attempts
+
+age = input(f"Hello {name}. What is your age: ")
+try:
+    float(age)
+    print("Your age is valid")
+except ValueError:
+    print("Your age is invalid")
+except:
+    print("Something else went wrong!")
 
