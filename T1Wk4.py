@@ -35,37 +35,39 @@ name = input("What is your name: ")
 #         else:
 #             print("Valid number")
 #
-def numbercheck(num):
-    num = str(num)
-    # Handle empty string
-    if not num:
-        return False
-    # No sign present, just check if all characters are digits
-    return num.isdigit()
+# def numbercheck(num):
+#     num = str(num)
+#     # Handle empty string
+#     if not num:
+#         return False
+#     # No sign present, just check if all characters are digits
+#     return num.isdigit()
+# 
+# attempts = ''
+# ### Get users age
+# def getage():
+#     global attempts
+#     attempts = 3
+#     age = input(f"Hello {name}. What is your age: ")
+#     if attempts > 0:
+#         print(attempts)
+#         numbercheck(age)
+#         age = input("Try again: ")
+#         attempts = attempts - 1
+# 
+# 
+#             
+# getage()
+# 
+# def getchuppas():
+#     attempting = 3
+#     chuppas = input("How many chuppa chupps do you have: ")
+#     numbercheck(chuppas, attempting)
+# 
+# getchuppas()
+# def getlollies():
+#     attempts = 3
+#     lollies = input("How many lollies are left: ")
+#     numbercheck(lollies)
 
-attempts = ''
-### Get users age
-def getage():
-    global attempts
-    attempts = 3
-    age = input(f"Hello {name}. What is your age: ")
-    if attempts > 0:
-        print(attempts)
-        numbercheck(age)
-        age = input("Try again: ")
-        attempts = attempts - 1
 
-
-            
-getage()
-
-def getchuppas():
-    attempting = 3
-    chuppas = input("How many chuppa chupps do you have: ")
-    numbercheck(chuppas, attempting)
-
-getchuppas()
-def getlollies():
-    attempts = 3
-    lollies = input("How many lollies are left: ")
-    numbercheck(lollies)
