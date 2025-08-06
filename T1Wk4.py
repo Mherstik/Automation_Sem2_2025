@@ -74,12 +74,28 @@ name = input("What is your name: ")
 # Introduce Try/Except
 # Get age and only give them three attempts
 
-age = input(f"Hello {name}. What is your age: ")
-try:
-    float(age)
-    print("Your age is valid")
-except ValueError:
-    print("Your age is invalid")
-except:
-    print("Something else went wrong!")
+print(f"Hello {name}. What is your age")
+def num_test(user_num):
+    try:
+        float(user_num)
+        print("Your number is valid")
+        return False
+    except ValueError:
+        print("Your number is invalid")
+        return True
+    except:
+        print("Something else went wrong!")
+        return True
+
+def validator(prompt=" "):
+    user_num = input(prompt)
+    attempts = 3
+    while attempts <= 3:
+        attempts = attempts - 1
+        if not num_test(user_num):
+            quit()
+        else:
+            user_num = input("Give me a valid number: ")
+validator()
+print("Made it to here!!")
 
