@@ -13,22 +13,59 @@
 
 name = input("What is your name: ")
 # age = input("Hello", name + ". What is your age: ") 
-# ^^^^^ error because expected 1 argument and got 2.
+# ^^^^^ error because expected 1 argument and got 2
 
-age = input(f"Hello {name}. What is your age: ")
+## validation attempts
+# def validattempts(attempt):
+#     global attempts
+#     if attempt > 0 :
+#         attempts = attempt -1
+#         return attempts
+#     else:
+#         print("Out of attempts")
+#         quit()
 
 # test is is a number
+# def numbercheck(num, attempts):
+#     # validattempts(attempting)
+#     for attempt in range(attempts)
+#         if not num.isdigit():
+#             print("Not a valid number")
+#             return False, attempts
+#         else:
+#             print("Valid number")
+#
 def numbercheck(num):
-    if not num.isdigit():
-        print("Not a valid number")
+    num = str(num)
+    # Handle empty string
+    if not num:
         return False
-    else:
-        print("Valid number")
+    # No sign present, just check if all characters are digits
+    return num.isdigit()
 
-numbercheck(age)
+attempts = ''
+### Get users age
+def getage():
+    global attempts
+    attempts = 3
+    age = input(f"Hello {name}. What is your age: ")
+    if attempts > 0:
+        print(attempts)
+        numbercheck(age)
+        age = input("Try again: ")
+        attempts = attempts - 1
 
-chuppas = input("How many chuppa chupps do you have: ")
-numbercheck(chuppas)
 
-lollies = input("How many lollies are left: ")
-numbercheck(lollies)
+            
+getage()
+
+def getchuppas():
+    attempting = 3
+    chuppas = input("How many chuppa chupps do you have: ")
+    numbercheck(chuppas, attempting)
+
+getchuppas()
+def getlollies():
+    attempts = 3
+    lollies = input("How many lollies are left: ")
+    numbercheck(lollies)
