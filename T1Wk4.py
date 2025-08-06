@@ -79,20 +79,20 @@ def num_test(user_num):
     try:
         float(user_num)
         print("Your number is valid")
-        return False
+        return True
     except ValueError:
         print("Your number is invalid")
-        return True
+        return False
     except:
         print("Something else went wrong!")
-        return True
+        return False
 
 def validator(prompt=" "):
     user_num = input(prompt)
     attempts = 3
     while attempts <= 3:
         attempts = attempts - 1
-        if not num_test(user_num):
+        if num_test(user_num):
             quit()
         else:
             user_num = input("Give me a valid number: ")
