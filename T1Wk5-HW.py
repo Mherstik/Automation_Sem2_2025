@@ -2,7 +2,8 @@
 # STORE THE PASSWORD IN A FILE
 ###
 # READ THE PASSWORD AND MAKE SURE IT'S NOT THE SAME
-# If  the same - tell them it's the same and to put it in again
+# If  the same - tell them it's the same
+# BONUS - put it in again
 
 
 # password = input("Gimme yo passwd bro: ")
