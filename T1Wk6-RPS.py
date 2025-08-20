@@ -20,7 +20,7 @@ import random
 
 def rps():
     options = ["Rock", "Paper", "Scissors"]
-    print("Choose your weapon: ")
+    print("\nChoose your weapon: ")
     print("0 = Rock, 1 = Paper, 2 = Scissors")
     
     ## player input
@@ -35,12 +35,26 @@ def rps():
     
     result = (player - computer + 3) % 3
     if result == 0:
-        print("It's a tie!!")
+        #print("It's a tie!!")
+        return 0
     elif result == 1:
-        print("Human wins!!")
+        #print("Human wins!!")
+        return 1
     else:
-        print("Computer wins!!")
-    
-rps()
+        #print("Computer wins!!")
+        return -1
+
+## Best of 3
+games = 3
+wins = 0
+while games > 0:
+    wins += rps()  # wins = wins + rps()
+    games -=1
+if wins == 0:
+    print("You tied")
+elif wins >= 1:
+    print("Human wins")
+else:
+    print("Computer wins")
     
 
