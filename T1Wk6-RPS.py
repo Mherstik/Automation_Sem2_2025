@@ -19,21 +19,24 @@
 import random
 
 def rps():
-    options = ["Rock", "Paper", "Scissors"]
+    options = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
     print("\nChoose your weapon: ")
-    print("0 = Rock, 1 = Paper, 2 = Scissors")
+    # print("0 = Rock, 1 = Paper, 2 = Scissors, 3 = Lizard , 4 = Spock")
+    for i in range(len(options)):
+        print(f"{i} = {options[i]}")
+            
     
     ## player input
     player = int(input("I choose: "))
     
     # computer random option
-    computer = random.randint(0,2)
+    computer = random.randint(0, len(options) - 1 )
     
     ### Show choices
     print(f"\nYou chose {options[player]}")
     print(f"Computer chose {options[computer]}")
     
-    result = (player - computer + 3) % 3
+    result = (player - computer + len(options)) % len(options)
     if result == 0:
         #print("It's a tie!!")
         return 0
