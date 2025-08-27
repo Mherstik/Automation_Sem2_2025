@@ -4,7 +4,7 @@
 # C = (F - 32) × 5/9
 
 def getUserTemp():
-    userDegree = input("What is the temperature in F: ")
+    userDegree = input("What is the temperature: ")
 
     while True:
         try:
@@ -13,7 +13,7 @@ def getUserTemp():
             break
         except:
             print("Please put a valid number.")
-            userDegree = input("What is the temperature in F: ")
+            userDegree = input("What is the temperature: ")
 
 userTemp = getUserTemp()
 
@@ -33,5 +33,8 @@ def convertCtoF(userTemp):
 ###
 ## Ask the user what they want to convert to or from
 ###
-convertFtoC(userTemp)
-convertCtoF(userTemp)
+print("What do you want to do?\n1-Convert Fahrenheit to Celcius\n2-Convert Celcius to Fahrenheit")
+##
+userChoice = input("Option: ")
+#    convertFtoC(userTemp)
+#    convertCtoF(userTemp)
