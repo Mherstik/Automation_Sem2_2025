@@ -26,9 +26,12 @@ def convertFtoC(userTemp):
 
 def convertCtoF(userTemp):
     # F = (C * 9/5) + 32
-    pass
+    fahrenheit = (userTemp * 9/5) + 32
+    print(f"{userTemp}C is equal to {fahrenheit:.2f}F")
+
 
 ###
 ## Ask the user what they want to convert to or from
 ###
 convertFtoC(userTemp)
+convertCtoF(userTemp)
