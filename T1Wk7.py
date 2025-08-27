@@ -15,7 +15,7 @@ def getUserTemp():
             print("Please put a valid number.")
             userDegree = input("What is the temperature: ")
 
-userTemp = getUserTemp()
+# userTemp = getUserTemp() # Move to the bottom
 
 def convertFtoC(userTemp):
     # C = (F - 32) × 5/9
@@ -36,5 +36,14 @@ def convertCtoF(userTemp):
 print("What do you want to do?\n1-Convert Fahrenheit to Celcius\n2-Convert Celcius to Fahrenheit")
 ##
 userChoice = input("Option: ")
-#    convertFtoC(userTemp)
-#    convertCtoF(userTemp)
+userTemp = getUserTemp()
+if userChoice == "1":
+    convertFtoC(userTemp)
+elif userChoice == "2":
+    convertCtoF(userTemp)
+elif userChoice == "3":
+    convertFtoC(userTemp)
+    convertCtoF(userTemp)
+else:
+    print("Invalid choice")
+
