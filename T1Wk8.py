@@ -6,6 +6,10 @@
 #
 
 def makeNum(userNum):
+    """
+    get userNum and test it
+    check for type int
+    """
     try:
         int(userNum)
         print(type(userNum))
@@ -13,6 +17,7 @@ def makeNum(userNum):
         print(f"{userNum} is not a number")
     except:
         print("Something went wrong")
+
 
 makeNum("1")
 print("Second")
