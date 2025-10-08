@@ -40,3 +40,23 @@ with open("something.csv","r") as file:
     contents = file.read()
     print(contents)
 
+####
+# Test if file exists
+# Option 1 - try and open the file for reading
+# Option 2 - check if file is in the path
+import os
+print(os.path.exists("something"))
+print(os.path.exists("something.csv"))
+f1 = "something"
+print(os.path.exists("something.csv"))
+print(os.path.isfile(f1))
+print(os.path.exists(f1))
+
+with open(f1, "a") as file:
+    print("File exists and is readable")
+
+try:
+    with open(f1, "w") as file:
+        print("File exists and is readable")
+except FileNotFoundError:
+    print("File does not exist")
