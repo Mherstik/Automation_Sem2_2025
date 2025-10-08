@@ -5,19 +5,21 @@
 # Purpose: To teach students stuff
 #
 
-def makeNum(userNum):
+def makeNum(user_num):
     """
-    get userNum and test it
-    check for type int
-    """
+get userNum and test it
+check for type int
+third line
+"""
     try:
-        int(userNum)
-        print(type(userNum))
+        int(user_num)
+        print(type(user_num))
     except ValueError:
-        print(f"{userNum} is not a number")
+        print(f"{user_num} is not a number")
     except:
         print("Something went wrong")
 
+print(makeNum.__doc__)
 
 makeNum("1")
 print("Second")
@@ -28,3 +30,9 @@ print("Fourth")
 makeNum("Test")
 print("Fifth")
 makeNum("One")
+
+
+print(help(makeNum))
+print(makeNum.__doc__)
+
+
