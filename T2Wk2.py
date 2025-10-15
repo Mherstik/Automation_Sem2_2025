@@ -8,6 +8,7 @@
 import os			# interacting with operating system 
 import sys			# getting operating system information
 import subprocess	# spawn process and get results
+import platform
 
 print(sys.executable)
 
