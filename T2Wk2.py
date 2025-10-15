@@ -12,7 +12,7 @@ import subprocess	# spawn process and get results
 print(sys.executable)
 
 ## Import modules
-import importlib
+import importlib.util
 moduleList = ['requests','time', 'speedtest-cli']
 for each in moduleList:
     spec = importlib.util.find_spec(each)
