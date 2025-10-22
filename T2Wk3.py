@@ -1,8 +1,22 @@
+#!/usr/bin/env python3
+# Author:
+# Date:
+# Purpose:
+
+
+# get platform
+import platform
+
+def get_platform():
+    return platform.platform()
+
+plat = get_platform()
+# print(plat)
+
 ## Check modules - import known good module
 import os			# interacting with operating system 
 import sys			# getting operating system information
 import subprocess	# spawn process and get results
-import platform
 
 print(platform.platform())
 print(platform.system())
