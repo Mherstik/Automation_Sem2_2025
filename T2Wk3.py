@@ -12,7 +12,24 @@ print(platform.node())
 
 import socket
 print(socket.gethostname())
-print(socket.gethostbyname(socket.gethostname()))
+
+def getIPaddress():
+    print(socket.gethostbyname(socket.gethostname()))
+
+    # print(socket.gethostbyname(socket.gethostname()))
+    IPadd = socket.gethostbyname(socket.gethostname()) 
+
+    if IPadd.startswith("127") or IPadd.startswith("169"):
+        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        s.connect(("8.8.8.8", 80))
+        IPadd = s.getsockname()[0]	
+
+    print(IPadd)
+    return IPadd
+
+print("IP address= ", getIPaddress())
+
+ip = getIPaddress()
 
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
@@ -24,7 +41,6 @@ print(os.getenv('COMPUTERNAME'))
 print(os.environ)
 print(os.environ['OS'])
 print(platform.uname())
-print(platform.freedesktop_os_release())
 
 # print(os.environ['OS']) # windows only
 print(platform.uname())
