@@ -18,3 +18,12 @@ print(os.environ)
 print(os.environ['OS'])
 print(platform.uname())
 print(platform.freedesktop_os_release())
+
+# print(os.environ['OS']) # windows only
+print(platform.uname())
+print(platform.freedesktop_os_release()) # linux only
+
+pl = platform.uname()
+print('PL Info is', pl)
+print(type(pl))
+print(pl.system + ';' + pl.node, pl.release)
