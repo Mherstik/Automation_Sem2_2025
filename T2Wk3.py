@@ -12,6 +12,8 @@ print(platform.node())
 
 import socket
 print(socket.gethostname())
+print(socket.gethostbyname(socket.gethostname()))
+
 
 print(os.getenv('COMPUTERNAME'))
 print(os.environ)
