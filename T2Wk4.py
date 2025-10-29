@@ -20,15 +20,40 @@ import os
 ## Good for finding operating system type
 ## Good for finding files
 import psutil
+
+portStat = []
+tcp_process = psutil.net_connections(kind='tcp4')
+print(type(tcp_process))
+# print(tcp_process)
+for tcp_process in psutil.net_connections():
+    # if tcp_process.status != 'CLOSE_WAIT':
+    if tcp_process.status == 'LISTEN' or tcp_process.status == 'ESTABLISHED':
+        #print(tcp_process.status,
+        #      tcp_process.laddr.ip,
+        #      tcp_process.laddr.port)
+        portStat.append([tcp_process.status,
+              tcp_process.laddr.ip,
+              tcp_process.laddr.port])
+
+print(portStat)
+
+
 ## good for network connection
 import cpuinfo
 
 
 def get_cpu_data():
     cpu_data = cpuinfo.get_cpu_info()
-    print(cpu_data['brand_raw'])
-    print(cpu_data['vendor_id_raw'])
+    return cpu_data
 
+print("I'm out of the function")
+
+cpu_data = get_cpu_data()  # have to run the function first!!
+print(type(cpu_data))
+print(cpu_data)
+print(cpu_data['brand_raw'])
+print(cpu_data['vendor_id_raw'])
+print(cpu_data['python_version'])
 
 ## Good for finding operating system 
 print(platform.processor())
@@ -42,8 +67,9 @@ print(platform.processor())
 # print(f"Machine: {uname.machine}")
 # print(f"Processor: {uname.processor}")
 
-
+################
 # # Script to ping all IP addresses in a /24 subnet
+################
 # import os
 # import platform
 # network = input ("Enter first 3 numbers of IP network, e.g. 1.2.3: ")
@@ -61,4 +87,3 @@ print(platform.processor())
 #     os.system(f"ping -{pingflag} 2 " + network + "." + str(host))
 
 
-get_cpu_data()
